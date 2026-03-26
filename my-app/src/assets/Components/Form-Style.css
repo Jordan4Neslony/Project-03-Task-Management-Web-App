@@ -1,0 +1,28 @@
+.contact-me-form{
+    display: block;
+    max-height: 600px;
+    max-width: 600px;
+    background: white;
+    color:dimgrey;
+    border-width: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    margin: 0% 10% 10% 30%;
+}
+@media screen and (max-width: 768px) {
+.contact-me-form{
+    display: block;
+    max-height: fit-content;
+    max-width: 600px;
+    background: white;
+    color:dimgrey;
+    border-width: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    margin: 50% 10% 10% 10%;
+}
+}

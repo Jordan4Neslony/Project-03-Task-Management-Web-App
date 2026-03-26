@@ -2,6 +2,7 @@ import './custom.scss';
 import './App.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import brandLogo from './assets/Images/Tasker-Doer-Fake-Brand.png';
+import ContactForm from './assets/Components/Contact-Form';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function Home() {
@@ -32,12 +33,32 @@ function Home() {
   );
 }
 
-function About() {
-  return <h1>About Page</h1>;
+function Todo() {
+  return (
+    <div>
+      {/*Vertical Style Bars*/}
+      <div className="left-vertical-bar"></div>
+      <div className="right-vertical-bar"></div>
+      {/*Content Spacer*/}
+      <div style={{ marginBottom: '20%' }}></div>
+    </div>
+  );
+
 }
 
 function Contact() {
-  return <h1>Contact Page</h1>;
+  return (
+    <div>
+      {/*Vertical Style Bars*/}
+      <div className="left-vertical-bar"></div>
+      <div className="right-vertical-bar"></div>
+      {/*Content Spacer*/}
+      <div style={{ marginBottom: '20%' }}></div>
+
+      {/*Survey*/}
+      <ContactForm></ContactForm>
+    </div>
+  );
 }
 
 function App() {
@@ -58,7 +79,7 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="nav-list links nav ">
               <li className="nav-item text-light"><Link to="/" className='nav-link'>Home</Link></li>
-              <li className="nav-item text-light"><Link to="/about" className='nav-link'>About</Link></li>
+              <li className="nav-item text-light"><Link to="/Todo" className='nav-link'>Todo</Link></li>
               <li className="nav-item text-light"><Link to="/contact" className='nav-link'>Contact</Link></li>
             </ul>
           </div>
@@ -68,7 +89,7 @@ function App() {
       {/* Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/Todo" element={<Todo />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
