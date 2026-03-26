@@ -1,5 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'
-import 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'
 import brandLogo from './assets/Images/Tasker-Doer-Fake-Brand.png';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
