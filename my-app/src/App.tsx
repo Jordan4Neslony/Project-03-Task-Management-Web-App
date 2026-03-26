@@ -1,5 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.css';
+import './custom.scss';
 import './App.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import brandLogo from './assets/Images/Tasker-Doer-Fake-Brand.png';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
@@ -43,15 +44,25 @@ function App() {
 
   return (
     <BrowserRouter>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
       {/* Navigation */}
-      <nav className="navigational-bar" id="headerNavigation">
-        <h1 className="nav-title">To-Do-App</h1>
-        <ul className="nav-list links">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
+      <nav className="navigational-bar navbar navbar-expand-md" id="headerNavigation">
+        <div className="container-fluid">
+
+
+          <h1 className="nav-title">To-Do-App</h1>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarCollapse">
+            <ul className="nav-list links nav ">
+              <li className="nav-item text-light"><Link to="/" className='nav-link'>Home</Link></li>
+              <li className="nav-item text-light"><Link to="/about" className='nav-link'>About</Link></li>
+              <li className="nav-item text-light"><Link to="/contact" className='nav-link'>Contact</Link></li>
+            </ul>
+          </div>
+        </div>
       </nav>
 
       {/* Routes */}

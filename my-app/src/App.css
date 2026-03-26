@@ -17,7 +17,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 100;
-    height: 80px;
+    /*height: 80px;*/
     padding: 0 40px;
     border-width: 5px;
     border-style: solid;
@@ -73,7 +73,7 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .nav-list li {
@@ -154,7 +154,8 @@ body {
     margin: 0% 10% 10% 30%;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
+  /*
   .navigational-bar {
     display: flex;
     flex-direction: column;
@@ -179,16 +180,19 @@ body {
     margin-bottom: 10px;
     color: white;
 }
+    */
   .nav-list {
     display: flex;
     flex-direction: column;
     list-style: none;
     margin-top: 0px;
+    margin-bottom: 0px;
   }
   .nav-list li {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     margin-right: 0;
   }
+    
   .row {
     display: flex;
     flex-direction: column;
