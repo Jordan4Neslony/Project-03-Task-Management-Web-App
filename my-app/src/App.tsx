@@ -3,6 +3,7 @@ import './App.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import brandLogo from './assets/Images/Tasker-Doer-Fake-Brand.png';
 import ContactForm from './assets/Components/Contact-Form';
+import TodoApp from './assets/Components/Todo-App';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function Home() {
@@ -41,6 +42,8 @@ function Todo() {
       <div className="right-vertical-bar"></div>
       {/*Content Spacer*/}
       <div style={{ marginBottom: '20%' }}></div>
+      {/*Todo App Section*/}
+      <TodoApp></TodoApp>
     </div>
   );
 
