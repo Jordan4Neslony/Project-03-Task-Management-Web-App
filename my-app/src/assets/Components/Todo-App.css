@@ -2,20 +2,31 @@
     display: block;
     max-height: 600px;
     max-width: 600px;
-    background: white;
-    color:dimgrey;
+    color:white;
     border-width: 10px;
     border-radius: 10px;
     border-style: solid;
     border-color: black;
-    border-radius: 10px;
     margin: 0% 10% 10% 30%;
 }
 .todo{
-
+    border-width: 2px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: white;
+}
+.delete-todo-icon {
+    max-height: 50px;
+    max-width: 50px;
+    min-height: 10px;
+    min-width: 10px;
+    border-width: 2px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: black;
 }
 .todo-incomplete{
-    background: rgb(221, 255, 0);
+    background: rgb(98, 98, 98);
     text-decoration:none;
 }
 .todo-complete{
@@ -27,13 +38,11 @@
     display: block;
     max-height: fit-content;
     max-width: 600px;
-    background: white;
-    color:dimgrey;
+    color:white;
     border-width: 5px;
     border-radius: 10px;
     border-style: solid;
     border-color: black;
-    border-radius: 10px;
     margin: 0% 10% 10% 10%;
 }
 }
