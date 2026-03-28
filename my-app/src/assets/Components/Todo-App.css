@@ -6,15 +6,19 @@
     color:white;
     border-width: 10px;
     border-radius: 10px;
-    border-style: solid;
-    border-color: black;
+    border-style: double;
+    border-color: white;
     margin: 0% 10% 10% 30%;
 }
 .todo{
-    border-width: 2px;
-    border-radius: 3px;
+    border-width: 4px;
+    border-radius: 6px;
     border-style: solid;
-    border-color: white;
+    border-color: rgb(26, 26, 26);
+    max-height: max-content;
+    overflow-wrap: break-word;
+    cursor:pointer;
+    user-select: none;
 }
 .delete-todo-icon {
     max-height: 50px;
@@ -25,6 +29,7 @@
     border-radius: 3px;
     border-style: solid;
     border-color: black;
+    align-items: end;
 }
 .todo-incomplete{
     background: rgb(98, 98, 98);
@@ -34,16 +39,19 @@
     background: rgb(0, 255, 94);
     text-decoration:line-through;
 }
-@media screen and (max-width: 768px) {
+.todo-list-title {
+    color: white;
+}
+@media screen and (max-width: 800px) {
 .todo-app{
     display: block;
-    max-height: fit-content;
+    max-height: max-content;
     max-width: 600px;
     color:white;
     border-width: 5px;
     border-radius: 10px;
     border-style: solid;
-    border-color: black;
-    margin: 0% 10% 10% 10%;
+    border-color: white;
+    margin: 0% 8% 10% 8%;
 }
 }

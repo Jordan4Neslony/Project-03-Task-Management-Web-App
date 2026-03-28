@@ -40,10 +40,12 @@ function TodoApp() {
         setTodos([...todos, newTodo]);
         setTaskInput(""); // Clear the input field after adding
     };
-    
+
     return (
         <div className="todo-app">
-
+            <h1 className='todo-list-title'>
+                Your To Do List
+            </h1>
             <div className="row justify-content-center align-items-center g-3">
                 <div className="col flex-column align-items-center">
                     <h1 style={{ display: 'flex' }}>
@@ -55,8 +57,10 @@ function TodoApp() {
                             return (
                                 <div className='todo'>
                                     <div key={todo.id} onClick={() => handleToggle(todo.id)} className={todo.isCompleted ? 'todo-complete' : 'todo-incomplete'}>
-                                        <h2>{index + 1 + ".   " + todo.text}</h2>
+                                        <h2>{index + 1 + ".   " + todo.text + ".    "}
                                         <img className="delete-todo-icon" onClick={(e) => { e.stopPropagation(); deleteTodo(todo.id) }} src={deleteIcon} height="30px" width="30px"></img>
+                                        </h2>
+                                        
                                     </div>
                                 </div>
                             );
