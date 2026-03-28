@@ -25,32 +25,43 @@ function TodoApp() {
             prevTodos.filter(todo => todo.id !== id)
         );
     };
-    /*
-    const addTodo = (id: todos.length,) => {
+    const [taskInput, setTaskInput] = useState("");
 
+    const addTodo = () => {
+        // Prevent adding empty tasks
+        if (taskInput.trim() === "") return;
 
+        const newTodo = {
+            id: Date.now(), // Unique ID based on timestamp
+            text: taskInput,
+            isCompleted: false
+        };
+
+        setTodos([...todos, newTodo]);
+        setTaskInput(""); // Clear the input field after adding
     };
-    */
+    
     return (
         <div className="todo-app">
+
             <div className="row justify-content-center align-items-center g-3">
                 <div className="col flex-column align-items-center">
-                    <div >
-                        {
-                            todos.map((todo, index) => {
-
-                                return (
-                                    <div className='todo'>
-                                        <div key={todo.id}onClick={() => handleToggle(todo.id)} className={todo.isCompleted ? 'todo-complete' : 'todo-incomplete'}>
-                                            <h1>{index+1 + ".   " + todo.text}</h1>
-                                            <img className="delete-todo-icon" onClick={(e) => { e.stopPropagation(); deleteTodo(todo.id) }} src={deleteIcon} height="30px" width="30px"></img>
-                                            {/*<input type="checkbox" name="taskCheckbox" id={"taskCheckbox-" + todo.id} defaultChecked={false} onChange={() => handleToggle(todo.id)} />*/}
-                                        </div>
+                    <h1 style={{ display: 'flex' }}>
+                        <input type="text" value={taskInput} onChange={(e) => setTaskInput(e.target.value)} />
+                        <input className="btn btn-secondary" type="submit" value="Add Task" onClick={addTodo}></input>
+                    </h1>
+                    {
+                        todos.map((todo, index) => {
+                            return (
+                                <div className='todo'>
+                                    <div key={todo.id} onClick={() => handleToggle(todo.id)} className={todo.isCompleted ? 'todo-complete' : 'todo-incomplete'}>
+                                        <h2>{index + 1 + ".   " + todo.text}</h2>
+                                        <img className="delete-todo-icon" onClick={(e) => { e.stopPropagation(); deleteTodo(todo.id) }} src={deleteIcon} height="30px" width="30px"></img>
                                     </div>
-                                );
-                            })
-                        }
-                    </div>
+                                </div>
+                            );
+                        })
+                    }
                 </div>
             </div>
         </div>
