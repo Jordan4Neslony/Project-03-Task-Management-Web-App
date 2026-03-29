@@ -30,4 +30,3 @@ This website provides users with a todo list they can use to add, check off, and
 1. As a student, I want to keep myself reminded of my tasks, so that I can excel in school.
 2. As an employee, I want to have a checklist of my priorities, so that I  can complete my duties at my job effectively.
 3. As a parent, I want to have a to-do list, so that I can help my family in the best way I can.
-
