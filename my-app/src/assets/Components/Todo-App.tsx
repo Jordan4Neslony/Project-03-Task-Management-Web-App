@@ -53,14 +53,13 @@ function TodoApp() {
                         <input className="btn btn-secondary" type="submit" value="Add Task" onClick={addTodo}></input>
                     </h1>
                     {
-                        todos.map((todo, index) => {
+                        todos.map((todo, index) => { 
                             return (
                                 <div className='todo'>
                                     <div key={todo.id} onClick={() => handleToggle(todo.id)} className={todo.isCompleted ? 'todo-complete' : 'todo-incomplete'}>
                                         <h2>{index + 1 + ".   " + todo.text + ".    "}
                                         <img className="delete-todo-icon" onClick={(e) => { e.stopPropagation(); deleteTodo(todo.id) }} src={deleteIcon} height="30px" width="30px"></img>
                                         </h2>
-                                        
                                     </div>
                                 </div>
                             );
