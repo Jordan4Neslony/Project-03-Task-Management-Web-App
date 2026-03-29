@@ -29,17 +29,16 @@ function TodoApp() {
     const [taskInput, setTaskInput] = useState("");
 
     const addTodo = () => {
-        // Prevent adding empty tasks
         if (taskInput.trim() === "") return;
 
         const newTodo = {
-            id: Date.now(), // Unique ID based on timestamp
+            id: Date.now(), 
             text: taskInput,
             isCompleted: false
         };
 
         setTodos([...todos, newTodo]);
-        setTaskInput(""); // Clear the input field after adding
+        setTaskInput(""); 
     };
 
     return (
