@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 function TodoApp() {
 
+    const [filter, setFilter] = useState<"all" | "incomplete" | "complete">("all");
 
     const [todos, setTodos] = useState([
         { id: 1, text: "Do Laundry", isCompleted: false },
@@ -48,22 +49,33 @@ function TodoApp() {
             </h1>
             <div className="row justify-content-center align-items-center g-3">
                 <div className="col flex-column align-items-center">
+                    <h1 style={{ display: 'flex', gap: '10px' }}>
+                        <button className="btn btn-secondary" onClick={() => setFilter("all")}>All Todos</button>
+                        <button className="btn btn-secondary" onClick={() => setFilter("incomplete")}>Incomplete</button>
+                        <button className="btn btn-secondary" onClick={() => setFilter("complete")}>Complete</button>
+                    </h1>
                     <h1 style={{ display: 'flex' }}>
                         <input type="text" value={taskInput} onChange={(e) => setTaskInput(e.target.value)} />
                         <input className="btn btn-secondary" type="submit" value="Add Task" onClick={addTodo}></input>
                     </h1>
                     {
-                        todos.map((todo, index) => { 
-                            return (
-                                <div className='todo'>
-                                    <div key={todo.id} onClick={() => handleToggle(todo.id)} className={todo.isCompleted ? 'todo-complete' : 'todo-incomplete'}>
-                                        <h2>{index + 1 + ".   " + todo.text + ".    "}
-                                        <img className="delete-todo-icon" onClick={(e) => { e.stopPropagation(); deleteTodo(todo.id) }} src={deleteIcon} height="30px" width="30px"></img>
-                                        </h2>
-                                    </div>
-                                </div>
-                            );
+
+                        todos.filter((todo) => {
+                            if (filter === "incomplete") return !todo.isCompleted;
+                            if (filter === "complete") return todo.isCompleted;
+                            return true; 
                         })
+                            .map((todo, index) => {
+                                return (
+                                    <div className='todo'>
+                                        <div key={todo.id} onClick={() => handleToggle(todo.id)} className={todo.isCompleted ? 'todo-complete' : 'todo-incomplete'}>
+                                            <h2>{index + 1 + ".   " + todo.text + ".    "}
+                                                <img className="delete-todo-icon" onClick={(e) => { e.stopPropagation(); deleteTodo(todo.id) }} src={deleteIcon} height="30px" width="30px"></img>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                );
+                            })
                     }
                 </div>
             </div>
