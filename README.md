@@ -13,11 +13,13 @@ This website provides users with a todo list they can use to add, check off, and
 - Additionally this website is accesible for mobile devices and lower screen resoulution.
 
 # List of Container and Presentational Components: 
-1. Main Screen
-2. Todo App
-3. Contact Me Form
+1. Main Renderer
+2. App Screen
+3. Todo App
+4. Contact Me Form
 
-# Technologies Used: HTML, CSS, SCSS, Bootstrap, React (through Vyte), Babel, Node.js, and Typescript(?).
+
+# Technologies Used: HTML, CSS, SCSS, Bootstrap, React (through Vyte), Babel, Node.js, and Typescript.
 
 # Ideas for Future Improvement: 
 1. Having a different, more professional style.

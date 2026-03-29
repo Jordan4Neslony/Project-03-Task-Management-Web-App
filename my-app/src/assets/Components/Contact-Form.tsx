@@ -17,6 +17,7 @@ function ContactForm() {
             <h1 className="text-center description-white">
                 Contact Me?
             </h1>
+            {/*Contact Form*/}
             <form action="" method="post" className="m-4 ">
                 <table className="table table-bordered mx-auto ">
                     <tbody>
@@ -49,7 +50,7 @@ function ContactForm() {
                                 <label className="form-label">Submit</label>
                             </td>
                             <td>
-                                <div className="modal-footer">
+                                <div>
                                     <input className="btn btn-secondary" type="submit" value="Submit"></input>
                                 </div>
                             </td>
