@@ -4,7 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import brandLogo from './assets/Images/Tasker-Doer-Fake-Brand.png';
 import ContactForm from './assets/Components/Contact-Form';
 import TodoApp from './assets/Components/Todo-App';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, HashRouter } from 'react-router-dom';
 
 function Home() {
   return (<div>
@@ -67,7 +67,7 @@ function Contact() {
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
       {/* Navigation */}
       <nav className="navigational-bar navbar navbar-expand-md" id="headerNavigation">
@@ -95,7 +95,7 @@ function App() {
         <Route path="/Todo" element={<Todo />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
