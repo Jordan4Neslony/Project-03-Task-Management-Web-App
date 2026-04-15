@@ -72,8 +72,6 @@ function App() {
       {/* Navigation */}
       <nav className="navigational-bar navbar navbar-expand-md" id="headerNavigation">
         <div className="container-fluid">
-
-
           <h1 className="nav-title">To-Do-App</h1>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" >

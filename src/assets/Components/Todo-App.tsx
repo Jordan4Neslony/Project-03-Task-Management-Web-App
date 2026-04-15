@@ -5,7 +5,7 @@ import deleteIcon from '../Images/Delete-Icon.png';
 import { useState } from 'react';
 
 function TodoApp() {
-    
+
     //Array that is updated by state for mapping todos to the list. (Example todos already present).
     const [todos, setTodos] = useState([
         { id: 1, text: "Do Laundry", isCompleted: false },

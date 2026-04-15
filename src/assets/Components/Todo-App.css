@@ -1,6 +1,6 @@
 .todo-app{
     display: block;
-    max-height: 600px;
+    max-height: max-content;
     max-width: 600px;
     background-color: rgb(71, 71, 71);
     color:white;
